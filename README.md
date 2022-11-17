@@ -112,12 +112,12 @@ The killswitch for sending a SIGKILL is `Ctrl + ]]]`
 This would not have been made possible without the constant help and patience of [@steev](https://gitlab.com/steev), the Kali dev team, and Offensive-Security
 
 ## References
-[Script inspiration](https://gist.github.com/sfan5/52aa53f5dca06ac3af30455b203d3404)
+[Script inspiration](https://gist.github.com/sfan5/52aa53f5dca06ac3af30455b203d3404)\
 [Walkthrough and gotchas](https://medium.com/@huljar/setting-up-containers-with-systemd-nspawn-b719cff0fb8d)
 
 ## Links
 [Offensive-Security Official Website](https://www.offensive-security.com)\
-[Offensive-Security Community Discord](https://offs.ec/discord)
+[Offensive-Security Community Discord](https://offs.ec/discord)\
 [Kali Linux & Friends Discord](https://discord.kali.org)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F3EFYS1)
