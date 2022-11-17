@@ -4,7 +4,7 @@
 ## Pretext
 If you've ever found yourself in a situation where you compiled an older kernel exploit on your Kali Linux and tested it on the target, only to be hit with an error that reads as follows
 ```sh
-/path/to/libc.so.6: version `GLIBC_2.34' not found
+/path/to/libc.so.6: version 'GLIBC_2.34' not found
 ```
 
 This setup should help you with that scenario
