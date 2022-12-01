@@ -31,7 +31,7 @@ echo "[+] Building minimal Ubuntu 16.04 image at: /var/lib/machines/$container"
 echo "[!] This might take a while" && echo
 # Build a minimal Ubuntu 16.04 LTS (Xenial Xerus) container packaged with
 # tools required for compiling exploits that would work for similar releases
-debootstrap --variant=minbase --include=binutils,make,gcc-5,build-essential xenial /var/lib/machines/"$container" http://archive.ubuntu.com/ubuntu
+debootstrap --variant=minbase --include=binutils,make,gcc-5,build-essential,gcc-multilib xenial /var/lib/machines/"$container" http://archive.ubuntu.com/ubuntu
 sed '/^root:/ s|\*||' -i "/var/lib/machines/$container/etc/shadow" # passwordless login
 rm "/var/lib/machines/$container/etc/resolv.conf" # systemd configures this
 # https://github.com/systemd/systemd/issues/852
