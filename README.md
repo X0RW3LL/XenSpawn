@@ -33,7 +33,7 @@ kali@kali:~/XenSpawn$ sudo ./spawn.sh MACHINE_NAME
 kali@kali:~/XenSpawn$ sudo systemd-nspawn -M MACHINE_NAME
 Spawning container MACHINE_NAME on /var/lib/machines/MACHINE_NAME.
 Press ^] three times within 1s to kill container.
-root@MACHINE_NAME:~# exit
+root@MACHINE_NAME:~$ exit
 logout
 Container MACHINE_NAME exited successfully.
 ```
