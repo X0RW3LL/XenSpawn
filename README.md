@@ -29,7 +29,7 @@ kali@kali:~/XenSpawn$ chmod +x spawn.sh
 kali@kali:~/XenSpawn$ sudo ./spawn.sh MACHINE_NAME
 
 # Starting the newly spawned container
-# Note: MACHINE_NAME is to be replace with the machine name of choice
+# Note: MACHINE_NAME is to be replaced with the machine name of choice
 kali@kali:~/XenSpawn$ sudo systemd-nspawn -M MACHINE_NAME
 Spawning container MACHINE_NAME on /var/lib/machines/MACHINE_NAME.
 Press ^] three times within 1s to kill container.
