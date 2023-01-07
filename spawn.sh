@@ -46,11 +46,11 @@ echo
 echo "################################################################################################"
 echo
 echo "[+] Ubuntu 16.04 container spawned successfully. To boot up, use the following command:" && echo
-echo "    kali@kali:~$ systemd-nspawn -M $container" && echo
+echo "    root@kali:~# systemd-nspawn -M $container" && echo
 echo "[!] To exit out of the container, simply type exit and hit Enter"
 echo "[!] Container size and location on disk: $size"
 echo "[!] To remove the container from your system, use the following command:" && echo
-echo "    kali@kali:~$ machinectl remove $container" && echo
+echo "    root@kali:~# machinectl remove $container" && echo
 echo "[!] You can always send a SIGKILL by pressing ^] three times within 1 second ( Ctrl + ]]] )"
 echo
 echo "################################################################################################"
