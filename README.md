@@ -88,15 +88,19 @@ Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 
 ## Tests
 
-Currently, the following exploits (compiled with this solution) have been tested
+Currently, the following exploits (compiled with this solution) have been tested:
 
 |Exploit|Kernel|Status|
 |:--:|:--:|:--:|
-|[9542](https://www.exploit-db.com/exploits/9542)|2.6 < 2.6.19 (32bit)|**OK (fails on PHOENIX)**|
+|[9542](https://www.exploit-db.com/exploits/9542)|2.6 < 2.6.19 (32bit)|**OK\***|
 |[37292](https://www.exploit-db.com/exploits/37292)|3.13.0 < 3.19|**OK**|
 |[40839](https://www.exploit-db.com/exploits/40839)|2.6.22 < 3.9|**OK**|
 |[44298](https://www.exploit-db.com/exploits/44298)|4.4.0-116-generic|**OK**|
 |[CVE-2021-4034](https://github.com/berdav/CVE-2021-4034)|------|**OK**|
+
+> __Warning__
+> 
+> ***\*** Please note that **9542** does not work on **PHOENIX** when compiled using XenSpawn*
 
 ## Removing The Container
 To completely remove the container from your system, you can use `machinectl` as follows
