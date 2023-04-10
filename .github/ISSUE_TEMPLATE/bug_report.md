@@ -25,9 +25,21 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please provide the output of the following commands):**
  - `$ uname -a`
+```sh
+# Output goes below this comment
+```
  - `$ grep VERSION /etc/os-release`
+```sh
+# Output goes below this comment
+```
  - `$ apt policy debootstrap systemd-container bridge-utils`
+```sh
+# Output goes below this comment
+```
  - `$ stat /var/lib/machines`
+```sh
+# Output goes below this comment
+```
 
 **Additional context**
 Add any other context about the problem here.
