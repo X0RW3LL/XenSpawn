@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Template bug report for reproducibility
-title: "[BUG]"
+title: "[BUG] "
 labels: bug
 assignees: X0RW3LL
 
