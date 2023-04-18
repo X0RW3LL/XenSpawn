@@ -1,5 +1,5 @@
 ## Description
-`spawn.sh` is a helper script/wrapper that automates spinning up a quick minimal build of Ubuntu 16.04 LTS (Xenial Xerus)
+`spawn.sh` is a helper script/wrapper that automates spinning up a quick minimal Ubuntu 16.04 LTS (Xenial Xerus) container
 
 ## Pretext
 If you've ever found yourself in a situation where you compiled an older kernel exploit on your Kali Linux and tested it on the target, only to be hit with an error that reads as follows
@@ -87,15 +87,11 @@ Currently, the following exploits (compiled with this solution) have been tested
 
 |Exploit|Kernel|Status|
 |:--:|:--:|:--:|
-|[9542](https://www.exploit-db.com/exploits/9542)|2.6 < 2.6.19 (32bit)|**OK\***|
+|[9542](https://www.exploit-db.com/exploits/9542)|2.6 < 2.6.19 (32bit)|**OK**|
 |[37292](https://www.exploit-db.com/exploits/37292)|3.13.0 < 3.19|**OK**|
 |[40839](https://www.exploit-db.com/exploits/40839)|2.6.22 < 3.9|**OK**|
 |[44298](https://www.exploit-db.com/exploits/44298)|4.4.0-116-generic|**OK**|
 |[CVE-2021-4034](https://github.com/berdav/CVE-2021-4034)|------|**OK**|
-
-> __Warning__
-> 
-> ***\*** Please note that **9542** does not work on **PHOENIX** when compiled using XenSpawn*
 
 ## Removing The Container
 To completely remove the container from your system, you can use `machinectl` as follows
