@@ -12,6 +12,9 @@ This setup should help you with that scenario
 ## Intended Audience
 PEN-200 Students
 
+## Supported Architectures
+Currently, XenSpawn will run on x64 hosts
+
 ## Usage
 ```sh
 # Clone the repo locally, or download the script
