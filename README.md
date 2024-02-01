@@ -16,7 +16,9 @@ PEN-200 Students
 Currently, XenSpawn will run on x64 hosts
 
 ## Note on mirrors
-Some users have reported issues with the default mirror selector. If progress stalls at `I: Retrieving InRelease`, please try one of the mirrors listed on [http://mirrors.ubuntu.com/mirrors.txt](http://mirrors.ubuntu.com/mirrors.txt) (or [https://launchpad.net/ubuntu/+archivemirrors](https://launchpad.net/ubuntu/+archivemirrors) for geographic locations). You can pass the mirror as the second arg to the script. The second argument is optional, meaning if no custom mirrors are passed, the script defaults to the ubuntu archive. You should always try the default archive first, and only pass a custom mirror if needed.
+Some users have reported issues with the default mirror selector. If progress stalls at `I: Retrieving InRelease`, please try one of the mirrors listed on [http://mirrors.ubuntu.com/mirrors.txt](http://mirrors.ubuntu.com/mirrors.txt) (or [https://launchpad.net/ubuntu/+archivemirrors](https://launchpad.net/ubuntu/+archivemirrors) for geographic locations). You can pass the mirror as the second arg to the script. The second argument is optional, meaning if no custom mirrors are passed, the script defaults to the ubuntu archive. You should always try the default archive first, and only pass a custom mirror if needed
+
+Additionally, whichever network mirror you specify is stored in the `preferred_mirror` file and is therefore used by default. This is done for your convenience, but can be reverted at any time by deleting the file: `sudo rm preferred_mirror`
 
 ## Usage
 ```sh
