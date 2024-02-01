@@ -15,6 +15,9 @@ PEN-200 Students
 ## Supported Architectures
 Currently, XenSpawn will run on x64 hosts
 
+## Note on mirrors
+Some users have reported issues with the default mirror selector. If progress stalls at `I: Retrieving InRelease`, please try one of the mirrors listed on [http://mirrors.ubuntu.com/mirrors.txt](http://mirrors.ubuntu.com/mirrors.txt) (or [https://launchpad.net/ubuntu/+archivemirrors](https://launchpad.net/ubuntu/+archivemirrors) for geographic locations). You can pass the mirror as the second arg to the script. The second argument is optional, meaning if no custom mirrors are passed, the script defaults to the ubuntu archive. You should always try the default archive first, and only pass a custom mirror if needed.
+
 ## Usage
 ```sh
 # Clone the repo locally, or download the script
