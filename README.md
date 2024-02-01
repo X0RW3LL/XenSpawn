@@ -10,7 +10,7 @@ If you've ever found yourself in a situation where you compiled an older kernel 
 This setup should help you with that scenario
 
 ## Intended Audience
-PEN-200 Students
+PEN-200 Learners
 
 ## Supported Architectures
 Currently, XenSpawn will run on x64 hosts
