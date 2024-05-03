@@ -36,24 +36,16 @@ else
 	printf "\n[+] Using default mirror: $MIRROR\n"
 fi
 
-NOW=`date +%s`
-LAST_UPDATE=`stat --printf=%Z /var/cache/apt/pkgcache.bin`
-DELTA=$((NOW - LAST_UPDATE))
-
 function dep_check()
 {
-	if [ $DELTA -gt 43200 ]; then
-		printf "[!] Package index has not been updated in over 12 hours\n\n"
+	if [[ `dpkg -l | grep -o $1` ]]; then
+		printf "[+] $1: OK\n"
+	else
+		printf "[-] $1: Not found\n\n"
 		printf "[+] Updating package index\n\n"
 		apt update
-	else
-		if [[ `dpkg -l | grep -o $1` ]]; then
-			printf "[+] $1: OK\n"
-		else
-			printf "[-] $1: Not found\n\n"
-			printf "[+] Installing $1\n\n"
-			apt install -y $1
-		fi
+		printf "[+] Installing $1\n\n"
+		apt install -y $1
 	fi
 }
 
