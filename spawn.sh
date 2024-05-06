@@ -11,7 +11,7 @@ function usage()
 	printf "\n(Default archive): ./spawn.sh compiler\n"
 	printf "(Archive  mirror): ./spawn.sh compiler http://mirror.us-tx.kamatera.com/ubuntu\n"
 	printf "\n[!] Mirror list: http://mirrors.ubuntu.com/mirrors.txt\n\n"
-	exit 0
+	exit 1
 }
 
 if [ -z $1 ]; then
