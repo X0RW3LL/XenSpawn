@@ -1,10 +1,14 @@
 #!/bin/bash -e
 
-RED="31"
-GREEN="32"
-YELLOW="33"
-BOLDGREEN="\e[1;${GREEN}m"
-BOLDRED="\e[1;${RED}m"
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+RED_BOLD="31"
+GREEN_BOLD="32"
+YELLOW_BOLD="33"
+BOLDGREEN="\e[1;${GREEN_BOLD}m"
+BOLDRED="\e[1;${RED_BOLD}m"
+BOLDYELLOW="\e[1;${YELLOW_BOLD}m"
 ENDCOLOR="\e[0m"
 
 
@@ -15,7 +19,7 @@ fi
 
 function usage()
 {
-	printf "\nUsage: $0 <container_name> [mirror]\n" >&2
+	printf "\nUsage: $0 <${BOLDYELLOW}container_name${ENDCOLOR}> [${BOLDYELLOW}mirror${ENDCOLOR}]\n" >&2
 	printf "\n(Default archive): ./spawn.sh compiler\n"
 	printf "(Archive  mirror): ./spawn.sh compiler http://mirror.us-tx.kamatera.com/ubuntu\n"
 	printf "\n[${YELLOW}!${ENDCOLOR}] Mirror list: http://mirrors.ubuntu.com/mirrors.txt\n\n"
@@ -30,7 +34,7 @@ elif [[ $1 == *"/"* ]]; then
 	usage
 elif [[ -f "preferred_mirror" && $# -ne 2 ]]; then
 	MIRROR=`<preferred_mirror`
-	printf "\n[${GREEN}+${ENDCOLOR}] Using preferred mirror: $MIRROR\n"
+	printf "\n[+] Using preferred mirror: $MIRROR\n"
 elif [[ -f "preferred_mirror" && $# -eq 2 ]]; then
 	echo $2 > preferred_mirror
 	MIRROR=`<preferred_mirror`
@@ -38,10 +42,10 @@ elif [[ -f "preferred_mirror" && $# -eq 2 ]]; then
 elif [ $# -eq 2 ]; then
 	MIRROR=$2
 	echo $MIRROR > preferred_mirror
-	printf "\n[${GREEN}+${ENDCOLOR}] Setting preferred mirror: $MIRROR\n"
+	printf "\n[+] Setting preferred mirror: $MIRROR\n"
 else
 	MIRROR=http://archive.ubuntu.com/ubuntu
-	printf "\n[${GREEN}+${ENDCOLOR}] Using default mirror: $MIRROR\n"
+	printf "\n[+] Using default mirror: $MIRROR\n"
 fi
 
 function dep_check()
