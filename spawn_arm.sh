@@ -11,7 +11,6 @@ BOLDRED="\e[1;${RED_BOLD}m"
 BOLDYELLOW="\e[1;${YELLOW_BOLD}m"
 ENDCOLOR="\e[0m"
 
-
 if [ $UID -ne 0 ]; then
 	echo "This script must be run as root" >&2
 	exit 1
