@@ -90,7 +90,7 @@ dep_check debootstrap
 dep_check systemd-container
 dep_check bridge-utils
 
-if [ $ARM ]; then
+if [ !$ARM ]; then
 	# this is required for builing amd64 containers on ARM
 	dep_check qemu-user-static
 fi
